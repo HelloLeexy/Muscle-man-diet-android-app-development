@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project"
+    >
+    <!--网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 读写文件权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project">
+        <activity
+            android:name=".Activity.FoodDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TypeActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.CartListActivity" />
+        <activity android:name=".Activity.HomeMenuActivity" />
+        <activity android:name=".Activity.FoodListActivity" />
+        <activity android:name=".Activity.ShowDetailActivity" />
+        <activity android:name=".Activity.MyinfoActivity" />
+        <activity android:name=".Activity.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.ResultActivity" />
+        <!-- Android7.0以后读取文件需要配置Provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.project.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

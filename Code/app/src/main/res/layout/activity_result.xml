@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/foodDesc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f2f8"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#F1691C">
+
+            <ImageView
+                android:id="@+id/foodDesc_back"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/back">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Diet Result"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"></TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/search_back"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today's Calorie: "
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/totalCalorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 KCAL"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"></TextView>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/todayCalorie"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/search_back"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nutrition Intake:"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/nutIntake"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/back_home"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/orange_button_background"
+            android:gravity="center"
+            android:text="Done!!"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </LinearLayout>
+
+</ScrollView>
